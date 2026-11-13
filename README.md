@@ -35,7 +35,7 @@ Every team deploying LLMs hits the same wall: the demo looked great, the executi
 
 ## About
 
-Written by **Ido Guy**, AI Engineer. I build and evaluate production conversational AI for sales and customer-service teams.
+Written by **Ido Guy**, AI & Automation Engineer. I design end-to-end AI solutions for sales and operations teams, and measure what they deliver and what they cost.
 
 [LinkedIn](https://www.linkedin.com/in/ido-guy) · Also: [WhatsApp AI Agent Design](https://github.com/123idog/whatsapp-ai-agent-design) · [n8n Production Playbook](https://github.com/123idog/n8n-production-playbook) · [Claude Code for Automation Engineers](https://github.com/123idog/claude-code-for-automation-engineers)
 
