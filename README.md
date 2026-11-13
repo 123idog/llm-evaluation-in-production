@@ -17,10 +17,11 @@ Every team deploying LLMs hits the same wall: the demo looked great, the executi
 | 5 | [LLM-as-Judge](docs/05-llm-as-judge.md) | Rubrics from domain experts, N/A handling, judges that aren't reproducible |
 | 6 | [Observability](docs/06-observability.md) | Tracing without latency, privacy, scores, cost that's really a floor |
 | 7 | [Evaluating Third-Party APIs Before Integration](docs/07-evaluating-external-apis.md) | HTTP 200 that means failure, prices that don't reproduce |
+| 8 | [Measuring Cost](docs/08-measuring-cost.md) | Cost per result not per token, tracing that can answer it, where money leaks |
 
 ---
 
-## Six rules
+## Seven rules
 
 1. **A green execution proves nothing.** Measure what happened to the customer.
 2. **Say "retrieved N of M" before any number.** Truncated data produces confident, wrong conclusions.
@@ -28,6 +29,7 @@ Every team deploying LLMs hits the same wall: the demo looked great, the executi
 4. **A zero or a perfect score is a bug signature.** Make every measurement catch a known-bad case first.
 5. **In-sample is an upper bound.** Anything tuned on a dataset has to be re-measured on data it hasn't seen.
 6. **Measure the noise before ranking.** If re-running the judge moves the score, the score is partly a property of the run.
+7. **Price per result, not per token.** A cheaper model that needs longer conversations or wins fewer of them is more expensive.
 
 ---
 
@@ -36,5 +38,7 @@ Every team deploying LLMs hits the same wall: the demo looked great, the executi
 Written by **Ido Guy**, AI Engineer. I build and evaluate production conversational AI for sales and customer-service teams.
 
 [LinkedIn](https://www.linkedin.com/in/ido-guy) · Also: [WhatsApp AI Agent Design](https://github.com/123idog/whatsapp-ai-agent-design) · [n8n Production Playbook](https://github.com/123idog/n8n-production-playbook) · [Claude Code for Automation Engineers](https://github.com/123idog/claude-code-for-automation-engineers)
+
+Tools: [llm-eval-kit](https://github.com/123idog/llm-eval-kit) (regression tests) · [llm-cost-report](https://github.com/123idog/llm-cost-report) (cost per result from Langfuse traces)
 
 *All examples are generalised and numbers are rounded. No client data, prompts or identifiers are included.*
