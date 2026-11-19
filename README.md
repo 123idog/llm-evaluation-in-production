@@ -18,10 +18,11 @@ Every team deploying LLMs hits the same wall: the demo looked great, the executi
 | 6 | [Observability](docs/06-observability.md) | Tracing without latency, privacy, scores, cost that's really a floor |
 | 7 | [Evaluating Third-Party APIs Before Integration](docs/07-evaluating-external-apis.md) | HTTP 200 that means failure, prices that don't reproduce |
 | 8 | [Measuring Cost](docs/08-measuring-cost.md) | Cost per result not per token, tracing that can answer it, where money leaks |
+| 9 | [Choosing a Model](docs/09-choosing-a-model.md) | Silent deprecations, multi-turn replay that reversed a single-turn ranking, judge vs human |
 
 ---
 
-## Seven rules
+## Eight rules
 
 1. **A green execution proves nothing.** Measure what happened to the customer.
 2. **Say "retrieved N of M" before any number.** Truncated data produces confident, wrong conclusions.
@@ -30,6 +31,7 @@ Every team deploying LLMs hits the same wall: the demo looked great, the executi
 5. **In-sample is an upper bound.** Anything tuned on a dataset has to be re-measured on data it hasn't seen.
 6. **Measure the noise before ranking.** If re-running the judge moves the score, the score is partly a property of the run.
 7. **Price per result, not per token.** A cheaper model that needs longer conversations or wins fewer of them is more expensive.
+8. **Choose models on whole conversations.** A model that wins single replies can still lose the conversation.
 
 ---
 
